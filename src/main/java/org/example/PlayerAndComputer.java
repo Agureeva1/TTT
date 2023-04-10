@@ -8,7 +8,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-public class PlayerAndComputer extends JPanel{
+public class PlayerAndComputer extends JPanel {
     private static int xx = 0;
     private static int oo = 0;
     private final JPanel panel;
@@ -43,7 +43,7 @@ public class PlayerAndComputer extends JPanel{
         }
     }
 
-    public  JPanel getPanel() {
+    public JPanel getPanel() {
         return panel;
     }
 
@@ -52,23 +52,23 @@ public class PlayerAndComputer extends JPanel{
 
         if (xx <= 5) {
             if (setSign[0] + setSign[1] + setSign[2] == 300) {
-           //     System.out.println("Игра окончена. Крестики выиграли.");
+                //     System.out.println("Игра окончена. Крестики выиграли.");
                 JOptionPane.showMessageDialog(null, "Игра окончена. Крестики выиграли.");
                 return true;
             } else if (setSign[0] + setSign[1] + setSign[2] == 60) {
-            //    System.out.println("Игра окончена. Нолики выиграли.");
+                //    System.out.println("Игра окончена. Нолики выиграли.");
                 JOptionPane.showMessageDialog(null, "Игра окончена. Нолики выиграли.");
                 return true;
             } else if (setSign[3] + setSign[4] + setSign[5] == 300) {
-            //    System.out.println("Игра окончена. Крестики выиграли.");
+                //    System.out.println("Игра окончена. Крестики выиграли.");
                 JOptionPane.showMessageDialog(null, "Игра окончена. Крестики выиграли.");
                 return true;
             } else if (setSign[3] + setSign[4] + setSign[5] == 60) {
-             //   System.out.println("Игра окончена. Нолики выиграли.");
+                //   System.out.println("Игра окончена. Нолики выиграли.");
                 JOptionPane.showMessageDialog(null, "Игра окончена. Нолики выиграли.");
                 return true;
             } else if (setSign[6] + setSign[7] + setSign[8] == 300) {
-             //   System.out.println("Игра окончена. Крестики выиграли.");
+                //   System.out.println("Игра окончена. Крестики выиграли.");
                 JOptionPane.showMessageDialog(null, "Игра окончена. Крестики выиграли.");
                 return true;
             } else if (setSign[6] + setSign[7] + setSign[8] == 60) {
@@ -76,43 +76,43 @@ public class PlayerAndComputer extends JPanel{
                 JOptionPane.showMessageDialog(null, "Игра окончена. Нолики выиграли.");
                 return true;
             } else if (setSign[0] + setSign[3] + setSign[6] == 300) {
-             //   System.out.println("Игра окончена. Крестики выиграли.");
+                //   System.out.println("Игра окончена. Крестики выиграли.");
                 JOptionPane.showMessageDialog(null, "Игра окончена. Крестики выиграли.");
                 return true;
             } else if (setSign[0] + setSign[3] + setSign[6] == 60) {
-            //    System.out.println("Игра окончена. Нолики выиграли.");
+                //    System.out.println("Игра окончена. Нолики выиграли.");
                 JOptionPane.showMessageDialog(null, "Игра окончена. Нолики выиграли.");
                 return true;
             } else if (setSign[1] + setSign[4] + setSign[7] == 300) {
-            //    System.out.println("Игра окончена. Крестики выиграли.");
+                //    System.out.println("Игра окончена. Крестики выиграли.");
                 JOptionPane.showMessageDialog(null, "Игра окончена. Крестики выиграли.");
                 return true;
             } else if (setSign[1] + setSign[4] + setSign[7] == 60) {
-            //    System.out.println("Игра окончена. Нолики выиграли.");
+                //    System.out.println("Игра окончена. Нолики выиграли.");
                 JOptionPane.showMessageDialog(null, "Игра окончена. Нолики выиграли.");
                 return true;
             } else if (setSign[2] + setSign[5] + setSign[8] == 300) {
-            //    System.out.println("Игра окончена. Крестики выиграли.");
+                //    System.out.println("Игра окончена. Крестики выиграли.");
                 JOptionPane.showMessageDialog(null, "Игра окончена. Крестики выиграли.");
                 return true;
             } else if (setSign[2] + setSign[5] + setSign[8] == 60) {
-             //   System.out.println("Игра окончена. Нолики выиграли.");
+                //   System.out.println("Игра окончена. Нолики выиграли.");
                 JOptionPane.showMessageDialog(null, "Игра окончена. Нолики выиграли.");
                 return true;
             } else if (setSign[0] + setSign[4] + setSign[8] == 300) {
-             //   System.out.println("Игра окончена. Крестики выиграли.");
+                //   System.out.println("Игра окончена. Крестики выиграли.");
                 JOptionPane.showMessageDialog(null, "Игра окончена. Крестики выиграли.");
                 return true;
             } else if (setSign[0] + setSign[4] + setSign[8] == 60) {
-              //  System.out.println("Игра окончена. Нолики выиграли.");
+                //  System.out.println("Игра окончена. Нолики выиграли.");
                 JOptionPane.showMessageDialog(null, "Игра окончена. Нолики выиграли.");
                 return true;
             } else if (setSign[2] + setSign[4] + setSign[6] == 300) {
-             //   System.out.println("Игра окончена. Крестики выиграли.");
+                //   System.out.println("Игра окончена. Крестики выиграли.");
                 JOptionPane.showMessageDialog(null, "Игра окончена. Крестики выиграли.");
                 return true;
             } else if (setSign[2] + setSign[4] + setSign[6] == 60) {
-            //    System.out.println("Игра окончена. Нолики выиграли.");
+                //    System.out.println("Игра окончена. Нолики выиграли.");
                 JOptionPane.showMessageDialog(null, "Игра окончена. Нолики выиграли.");
                 return true;
             }
@@ -290,12 +290,12 @@ public class PlayerAndComputer extends JPanel{
         } else {
             Random rand = new Random();
             LinkedList<Integer> allCone = new LinkedList<>();
-           if (setSign[0] == 0) allCone.add(0);
+            if (setSign[0] == 0) allCone.add(0);
             if (setSign[2] == 0) allCone.add(2);
             if (setSign[6] == 0) allCone.add(6);
             if (setSign[8] == 0) allCone.add(8);
             int randomIndex = rand.nextInt(allCone.size());
-            int randomElement = (int)allCone.get(randomIndex);
+            int randomElement = (int) allCone.get(randomIndex);
             findEmptyCellInLine(randomElement);
 
         }

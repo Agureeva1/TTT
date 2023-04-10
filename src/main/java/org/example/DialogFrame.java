@@ -41,13 +41,9 @@ public class DialogFrame extends JFrame {
         sButtonPanel.add(button1);
         sButtonPanel.add(button2);
 
-//        JLabel choirs =  new JLabel("<html> <br>" +
-//                "Выберите<br>" +
-//                "количество<br>" +
-//                "игроков<br></html>");
 
-        JLabel choirs =  new JLabel("<html> <br>" +
-                "<br>" +"Количество игроков:<br></html>");
+        JLabel choirs = new JLabel("<html> <br>" +
+                "<br>" + "Количество игроков:<br></html>");
         choirs.setFont(new Font("Serif", Font.BOLD, 16));
 
         panel1.add(choirs, BorderLayout.CENTER);
@@ -65,7 +61,7 @@ public class DialogFrame extends JFrame {
 
     }
 
-    private void buttonClick(ActionEvent e){
+    private void buttonClick(ActionEvent e) {
         this.getContentPane().remove(currentPanel);
 
         if (e.getSource().equals(button1)) {
@@ -77,15 +73,14 @@ public class DialogFrame extends JFrame {
             sButtonPanel.setBackground(new Color(75, 211, 135));
 
 
-        }
-        else if (e.getSource().equals(button2)) {
-                this.getContentPane().add(playerAndPlayer.getPanel(), BorderLayout.CENTER);
-                currentPanel = playerAndPlayer.getPanel();
+        } else if (e.getSource().equals(button2)) {
+            this.getContentPane().add(playerAndPlayer.getPanel(), BorderLayout.CENTER);
+            currentPanel = playerAndPlayer.getPanel();
             nPanel.setBackground(new Color(250, 243, 104, 239));
             ePanel.setBackground(new Color(250, 243, 104, 239));
             wPanel.setBackground(new Color(250, 243, 104, 239));
             sButtonPanel.setBackground(new Color(250, 243, 104, 239));
-            }
+        }
         currentPanel.revalidate();
         this.repaint();
     }
