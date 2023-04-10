@@ -8,7 +8,7 @@ public class PlayerAndPlayer extends JPanel {
     private static int o = 0;
     private final JPanel panel;
     private static final int[] setSign = new int[9];
-    private final JButton[] arrBut = new JButton[9];
+    private static final JButton[] arrBut = new JButton[9];
 
     public PlayerAndPlayer() {
 
@@ -36,13 +36,7 @@ public class PlayerAndPlayer extends JPanel {
                     arrBut[finalI].setEnabled(false);
 
                 }
-                isWin();
-                if (isWin()) {
-                    for (JButton jButton : arrBut) {
-                        jButton.setEnabled(false);
-                    }
-
-                }
+                isWinner();
 
             });
             panel.add(arrBut[i]);
@@ -57,75 +51,84 @@ public class PlayerAndPlayer extends JPanel {
 
         if (x <= 5) {
             if (setSign[0] + setSign[1] + setSign[2] == 300) {
-                System.out.println("Игра окончена. Крестики выиграли.");
+           //     System.out.println("Игра окончена. Крестики выиграли.");
                 JOptionPane.showMessageDialog(null, "Игра окончена. Крестики выиграли.");
                 return true;
             } else if (setSign[0] + setSign[1] + setSign[2] == 60) {
-                System.out.println("Игра окончена. Нолики выиграли.");
+            //    System.out.println("Игра окончена. Нолики выиграли.");
                 JOptionPane.showMessageDialog(null, "Игра окончена. Нолики выиграли.");
                 return true;
             } else if (setSign[3] + setSign[4] + setSign[5] == 300) {
-                System.out.println("Игра окончена. Крестики выиграли.");
+            //    System.out.println("Игра окончена. Крестики выиграли.");
                 JOptionPane.showMessageDialog(null, "Игра окончена. Крестики выиграли.");
                 return true;
             } else if (setSign[3] + setSign[4] + setSign[5] == 60) {
-                System.out.println("Игра окончена. Нолики выиграли.");
+           //     System.out.println("Игра окончена. Нолики выиграли.");
                 JOptionPane.showMessageDialog(null, "Игра окончена. Нолики выиграли.");
                 return true;
             } else if (setSign[6] + setSign[7] + setSign[8] == 300) {
-                System.out.println("Игра окончена. Крестики выиграли.");
+           //     System.out.println("Игра окончена. Крестики выиграли.");
                 JOptionPane.showMessageDialog(null, "Игра окончена. Крестики выиграли.");
                 return true;
             } else if (setSign[6] + setSign[7] + setSign[8] == 60) {
-                System.out.println("Игра окончена. Нолики выиграли.");
+           //     System.out.println("Игра окончена. Нолики выиграли.");
                 JOptionPane.showMessageDialog(null, "Игра окончена. Нолики выиграли.");
                 return true;
             } else if (setSign[0] + setSign[3] + setSign[6] == 300) {
-                System.out.println("Игра окончена. Крестики выиграли.");
+             //   System.out.println("Игра окончена. Крестики выиграли.");
                 JOptionPane.showMessageDialog(null, "Игра окончена. Крестики выиграли.");
                 return true;
             } else if (setSign[0] + setSign[3] + setSign[6] == 60) {
-                System.out.println("Игра окончена. Нолики выиграли.");
+            //    System.out.println("Игра окончена. Нолики выиграли.");
                 JOptionPane.showMessageDialog(null, "Игра окончена. Нолики выиграли.");
                 return true;
             } else if (setSign[1] + setSign[4] + setSign[7] == 300) {
-                System.out.println("Игра окончена. Крестики выиграли.");
+           //     System.out.println("Игра окончена. Крестики выиграли.");
                 JOptionPane.showMessageDialog(null, "Игра окончена. Крестики выиграли.");
                 return true;
             } else if (setSign[1] + setSign[4] + setSign[7] == 60) {
-                System.out.println("Игра окончена. Нолики выиграли.");
+             //   System.out.println("Игра окончена. Нолики выиграли.");
                 JOptionPane.showMessageDialog(null, "Игра окончена. Нолики выиграли.");
                 return true;
             } else if (setSign[2] + setSign[5] + setSign[8] == 300) {
-                System.out.println("Игра окончена. Крестики выиграли.");
+             //   System.out.println("Игра окончена. Крестики выиграли.");
                 JOptionPane.showMessageDialog(null, "Игра окончена. Крестики выиграли.");
                 return true;
             } else if (setSign[2] + setSign[5] + setSign[8] == 60) {
-                System.out.println("Игра окончена. Нолики выиграли.");
+             //   System.out.println("Игра окончена. Нолики выиграли.");
                 JOptionPane.showMessageDialog(null, "Игра окончена. Нолики выиграли.");
                 return true;
             } else if (setSign[0] + setSign[4] + setSign[8] == 300) {
-                System.out.println("Игра окончена. Крестики выиграли.");
+            //    System.out.println("Игра окончена. Крестики выиграли.");
                 JOptionPane.showMessageDialog(null, "Игра окончена. Крестики выиграли.");
                 return true;
             } else if (setSign[0] + setSign[4] + setSign[8] == 60) {
-                System.out.println("Игра окончена. Нолики выиграли.");
+            //    System.out.println("Игра окончена. Нолики выиграли.");
                 JOptionPane.showMessageDialog(null, "Игра окончена. Нолики выиграли.");
                 return true;
             } else if (setSign[2] + setSign[4] + setSign[6] == 300) {
-                System.out.println("Игра окончена. Крестики выиграли.");
+            //    System.out.println("Игра окончена. Крестики выиграли.");
                 JOptionPane.showMessageDialog(null, "Игра окончена. Крестики выиграли.");
                 return true;
             } else if (setSign[2] + setSign[4] + setSign[6] == 60) {
-                System.out.println("Игра окончена. Нолики выиграли.");
+           //     System.out.println("Игра окончена. Нолики выиграли.");
                 JOptionPane.showMessageDialog(null, "Игра окончена. Нолики выиграли.");
                 return true;
             }
         } else {
             System.out.println("Игра окончена. Победитель не определился.");
-            JOptionPane.showMessageDialog(null, "Игра окончена. Победитель не определился.");
+           // JOptionPane.showMessageDialog(null, "Игра окончена. Победитель не определился.");
         }
         return false;
     }
+    public static void isWinner() {
 
+        if (isWin()) {
+            for (JButton jButton : arrBut) {
+                jButton.setEnabled(false);
+            }
+
+        }
+
+    }
 }
