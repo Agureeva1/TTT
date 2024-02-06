@@ -7,8 +7,8 @@ public class PlayerAndPlayer extends JPanel {
     private static int x = 0;
     private static int o = 0;
     private final JPanel panel;
-    private static final int[] setSign = new int[9];
-    private static final JButton[] arrBut = new JButton[9];
+    private static  int[] setSign = new int[9];
+    private static  JButton[] arrBut = new JButton[9];
 
     public PlayerAndPlayer() {
 
@@ -21,18 +21,18 @@ public class PlayerAndPlayer extends JPanel {
             int finalI = i;
             arrBut[i].addActionListener(event -> {
                 if (x <= o) {
-                    arrBut[finalI].setIcon(new ImageIcon("C:\\Users\\aagureeva\\IdeaProjects\\tic-tac-toe\\Крестик.gif"));
+                    arrBut[finalI].setIcon(new ImageIcon("src/pic/Крестик.gif"));
                     x++;
                     setSign[finalI] = 100;
 
-                    arrBut[finalI].setDisabledIcon(new ImageIcon("C:\\Users\\aagureeva\\IdeaProjects\\tic-tac-toe\\Крестик.gif"));
+                    arrBut[finalI].setDisabledIcon(new ImageIcon("src/pic/Крестик.gif"));
                     arrBut[finalI].setEnabled(false);
                 } else {
-                    arrBut[finalI].setIcon(new ImageIcon("C:\\Users\\aagureeva\\IdeaProjects\\tic-tac-toe\\Нолик.gif"));
+                    arrBut[finalI].setIcon(new ImageIcon("src/pic/Нолик.gif"));
                     o++;
                     setSign[finalI] = 20;
 
-                    arrBut[finalI].setDisabledIcon(new ImageIcon("C:\\Users\\aagureeva\\IdeaProjects\\tic-tac-toe\\Нолик.gif"));
+                    arrBut[finalI].setDisabledIcon(new ImageIcon("src/pic/Нолик.gif"));
                     arrBut[finalI].setEnabled(false);
 
                 }
@@ -130,5 +130,29 @@ public class PlayerAndPlayer extends JPanel {
 
         }
 
+    }
+
+    public static int[] getSetSign() {
+        return setSign;
+    }
+
+    public static JButton[] getArrBut() {
+        return arrBut;
+    }
+
+    public static void setX(int x) {
+        PlayerAndPlayer.x = x;
+    }
+
+    public static void setO(int o) {
+        PlayerAndPlayer.o = o;
+    }
+
+    public static void setSetSign(int[] setSign) {
+        PlayerAndPlayer.setSign = setSign;
+    }
+
+    public static void setArrBut(JButton[] arrBut) {
+        PlayerAndPlayer.arrBut = arrBut;
     }
 }

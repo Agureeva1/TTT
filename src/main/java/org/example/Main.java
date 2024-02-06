@@ -3,7 +3,7 @@ package org.example;
 import java.awt.*;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
+   public static void main(String[] args) throws Exception {
         EventQueue.invokeLater(() -> {
 
             new DialogFrame();

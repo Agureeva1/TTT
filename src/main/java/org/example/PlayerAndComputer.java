@@ -2,6 +2,7 @@ package org.example;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Collection;
 import java.util.LinkedList;
 import java.util.Random;
 import java.util.concurrent.Executors;
@@ -12,9 +13,10 @@ public class PlayerAndComputer extends JPanel {
     private static int xx = 0;
     private static int oo = 0;
     private final JPanel panel;
-    private static final int[] setSign = new int[9];
-    private static final JButton[] arrBut = new JButton[9];
+    private static int[] setSign = new int[9];
+    private static JButton[] arrBut = new JButton[9];
     private static final int min = 20;
+
 
     public PlayerAndComputer() {
 
@@ -27,11 +29,11 @@ public class PlayerAndComputer extends JPanel {
             int finalI = i;
             arrBut[i].addActionListener(event -> {
                 {
-                    arrBut[finalI].setIcon(new ImageIcon("C:\\Users\\aagureeva\\IdeaProjects\\tic-tac-toe\\Крестик.gif"));
+                    arrBut[finalI].setIcon(new ImageIcon("src/pic/Крестик.gif"));
                     xx++;
                     setSign[finalI] = 100;
 
-                    arrBut[finalI].setDisabledIcon(new ImageIcon("C:\\Users\\aagureeva\\IdeaProjects\\tic-tac-toe\\Крестик.gif"));
+                    arrBut[finalI].setDisabledIcon(new ImageIcon("src/pic/Крестик.gif"));
                     arrBut[finalI].setEnabled(false);
                 }
                 winner();
@@ -316,9 +318,29 @@ public class PlayerAndComputer extends JPanel {
     public static void findEmptyCellInLine(int numberCell) {
         setSign[numberCell] = min;
         oo++;
-        arrBut[numberCell].setIcon(new ImageIcon("C:\\Users\\aagureeva\\IdeaProjects\\tic-tac-toe\\Нолик.gif"));
-        arrBut[numberCell].setDisabledIcon(new ImageIcon("C:\\Users\\aagureeva\\IdeaProjects\\tic-tac-toe\\Нолик.gif"));
+        arrBut[numberCell].setIcon(new ImageIcon("src/pic/Нолик.gif"));
+        arrBut[numberCell].setDisabledIcon(new ImageIcon("src/pic/Нолик.gif"));
         arrBut[numberCell].setEnabled(false);
         winner();
+    }
+
+    public static void setXx(int xx) {
+        PlayerAndComputer.xx = xx;
+    }
+
+    public static void setOo(int oo) {
+        PlayerAndComputer.oo = oo;
+    }
+
+    public static JButton[] getArrBut() {
+        return arrBut;
+    }
+
+    public static int[] getSetSign() {
+        return setSign;
+    }
+
+    public static void setSetSign(int[] setSign) {
+        PlayerAndComputer.setSign = setSign;
     }
 }
